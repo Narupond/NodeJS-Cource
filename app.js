@@ -3,12 +3,10 @@ const app = express();
 const debug = require('debug')('app');
 const morgan = require('morgan');
 const port = 5000;
+const path = require('path');
 
 app.use(morgan('combined'));
-app.use(express.static(path.join(__dirname,"/public")));
-
-app.set("views", "./src/views");
-app.set("view engine", "ejs")
+app.use(express.static(path.join(__dirname,"/public/")));
 
 // ทำการจัดการกับ request ที่เข้ามา
 app.get('/', (req, res) => {
