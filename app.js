@@ -4,11 +4,15 @@ const debug = require('debug')('app');
 const morgan = require('morgan');
 const port = 5000;
 
-app.use(morgan('combined'))
+app.use(morgan('combined'));
+app.use(express.static(path.join(__dirname,"/public")));
+
+app.set("views", "./src/views");
+app.set("view engine", "ejs")
 
 // ทำการจัดการกับ request ที่เข้ามา
 app.get('/', (req, res) => {
-    res.send('Hi');
+    res.render('index', {username: 'Naruporn', customer: ["Nrp1", "Nrp2", "Nrp"]});
 })
 
 app.listen(port, () => {
