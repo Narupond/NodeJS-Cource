@@ -1,34 +1,32 @@
-{
-    "products": [
-      {
+[
+    {
         "id": 0,
         "productTitle": "น้ำดื่ม 1",
         "productDescription": "น้ำดื่มสะอาด 1",
         "productPrice": 5
-      },
-      {
+    },
+    {
         "id": 1,
         "productTitle": "น้ำดื่ม 2",
         "productDescription": "น้ำดื่มสะอาด 2",
         "productPrice": 10
-      },
-      {
+    },
+    {
         "id": 2,
         "productTitle": "น้ำดื่ม 3",
         "productDescription": "น้ำดื่มสะอาด 3",
         "productPrice": 15
-      },
-      {
+    },
+    {
         "id": 3,
         "productTitle": "น้ำดื่ม 4",
         "productDescription": "น้ำดื่มสะอาด 4",
         "productPrice": 20
-      },
-      {
+    },
+    {
         "id": 4,
         "productTitle": "น้ำดื่ม 5",
         "productDescription": "น้ำดื่มสะอาด 5",
         "productPrice": 25
-      }
-    ]
-  }
+    }
+]
