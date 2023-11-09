@@ -12,11 +12,15 @@ app.use(express.static(path.join(__dirname, "/public/")));
 app.set("views", "./src/views");
 app.set("view engine", "ejs")
 
+productsRouter.route("/").get((req, res) => {
+    res.send("Hello Products");
+});
 productsRouter.route("/1").get((req, res) => {
     res.send("Hello Products 1");
 });
 
 app.use("/products", productsRouter)
+
 
 // ทำการจัดการกับ request ที่เข้ามา
 app.get('/', (req, res) => {
