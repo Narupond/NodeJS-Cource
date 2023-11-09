@@ -137,7 +137,11 @@
 
   <section class="pt-20 pb-8 lg:pt-[120px] lg:pb-[70px]">
     <div class="container">
-      <h1>Hi</h1>
+      <h1>Hi</h1>\
+      <% products.map((product) => { %>
+        <h4><%=product.productTitle %></h4>
+        <p><%=product.productDescription%></p>
+      <%})%>
     </div>
   </section>
 
