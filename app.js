@@ -16,7 +16,7 @@ productsRouter.route("/1").get((req, res) => {
     res.send("Hello Products 1");
 });
 
-app.get("/products", productsRouter)
+app.use("/products", productsRouter)
 
 // ทำการจัดการกับ request ที่เข้ามา
 app.get('/', (req, res) => {
