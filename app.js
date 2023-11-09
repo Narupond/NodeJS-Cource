@@ -4,8 +4,8 @@ const debug = require('debug')('app');
 const morgan = require('morgan');
 const PORT = process.env.PORT || 5000;
 const path = require('path');
-const products = require("./data/products.json");
-const productsRouter = express.Router();
+
+const productsRouter = require("./src/router/productsRouter");
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, "/public/")));
@@ -13,18 +13,6 @@ app.use(express.static(path.join(__dirname, "/public/")));
 app.set("views", "./src/views");
 app.set("view engine", "ejs")
 
-productsRouter.route("/").get((req, res) => {
-    res.render("products", {
-        products,
-    }
-    );
-});
-productsRouter.route("/:id").get((req, res) => {
-    const id = req.params.id;
-    res.render("product", {
-        product: products[id],
-    })
-});
 
 app.use("/products", productsRouter)
 
